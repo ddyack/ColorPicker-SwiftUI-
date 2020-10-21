@@ -17,7 +17,7 @@ struct ContentView: View {
             Color(.systemIndigo).edgesIgnoringSafeArea(.all)
             
             VStack {
-                ColorView(red: $redSliderValue, green: $greenSliderValue, blue: $blueSliderValue)
+                ColorView(red: redSliderValue, green: greenSliderValue, blue: blueSliderValue)
                 
                 ColorSlider(value: $redSliderValue, color: .red)
                 ColorSlider(value: $greenSliderValue, color: .green)

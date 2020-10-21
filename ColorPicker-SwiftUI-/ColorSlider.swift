@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ColorSlider: View {
     @Binding var value: Double
-    @State var show = false
+    @State var showAlert = false
     var color: Color
     
     var body: some View {
@@ -20,7 +20,7 @@ struct ColorSlider: View {
             Slider(value: $value, in: 0...255)
                 .accentColor(color)
             
-            sliderField(sliderValue: $value, showAlert: $show)
+            sliderField(sliderValue: $value, showAlert: $showAlert)
         }
     }
 }
@@ -29,7 +29,7 @@ struct ColorSlider_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color(.red)
-            ColorSlider(value: ContentView().$redSliderValue, color: .blue)
+            ColorSlider(value: .constant(100), color: .blue)
         }
     }
 }

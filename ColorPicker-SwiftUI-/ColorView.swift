@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ColorView: View {
-    @Binding var red: Double
-    @Binding var green: Double
-    @Binding var blue: Double
+    let red: Double
+    let green: Double
+    let blue: Double
       
     var body: some View {
         Color(red: red / 255, green: green / 255, blue: blue / 255)
